@@ -20,9 +20,11 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "extends": [
       "react-app",
       "react-app/jest"
+      
     ]
   },
   "browserslist": {
