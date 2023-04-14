@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { AsyncPaginate } from 'react-select-async-paginate'
 import { GEO_API_URL, geoApiOptions } from '../../api'
+import { useTranslation } from 'react-i18next'
 
 const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null)
+  const { t, i18n } = useTranslation()
 
   const loadOptions = inputValue => {
     return fetch(
@@ -31,11 +33,13 @@ const Search = ({ onSearchChange }) => {
 
   return (
     <AsyncPaginate
-      placeholder="Search for city"
+      placeholder={t('search.placeholder')}
       debounceTimeout={600}
       value={search}
       onChange={handleOnChange}
       loadOptions={loadOptions}
+      noOptionsMessage={() => t('search.noOptions')}
+      additional={{ language: i18n.language }}
     />
   )
 }
