@@ -6,9 +6,12 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "i18next": "^22.4.14",
+    "i18next-browser-languagedetector": "^7.0.1",
     "react": "^18.2.0",
     "react-accessible-accordion": "^5.0.0",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.0",
     "react-scripts": "5.0.1",
     "react-select-async-paginate": "^0.7.2",
     "web-vitals": "^2.1.4"
@@ -20,11 +23,9 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    
     "extends": [
       "react-app",
       "react-app/jest"
-      
     ]
   },
   "browserslist": {
@@ -38,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0"
   }
 }
